@@ -1,7 +1,7 @@
 #include "Widget.h"
 
 int main() {
-    Widget w;
+    Widget w(100, 200);
     w.Foo();
     return 0;
 }

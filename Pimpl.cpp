@@ -6,6 +6,13 @@ Pimpl<T>::Pimpl()
 }
 
 template <typename T>
+template <typename ... Args>
+Pimpl<T>::Pimpl(Args&& ... args)
+    : m_Ptr(std::make_unique<T>( std::forward<Args>(args)... )) {
+
+}
+
+template <typename T>
 Pimpl<T>::~Pimpl() = default;
 
 template <typename T>

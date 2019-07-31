@@ -7,6 +7,10 @@ template <typename T>
 class Pimpl {
 public:
     Pimpl();
+
+    template <typename ... Args>
+    Pimpl(Args&& ...);
+
     ~Pimpl();
 
     Pimpl(const Pimpl& ) = delete;

@@ -5,6 +5,8 @@
 
 class Widget {
 public:
+    Widget();
+    Widget(int width, int height);
     void Foo();
 
 private:

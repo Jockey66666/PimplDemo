@@ -1,5 +1,8 @@
 #include "Widget.h"
+#include "Pimpl.cpp"
 #include <iostream>
+
+template class Pimpl<Widget::Impl>;
 
 class Widget::Impl {
 public:
@@ -7,14 +10,6 @@ public:
         std::cout << "Foo" << std::endl;
     }
 };
-
-Widget::Widget()
-    : m_Impl(std::make_unique<Impl>()){
-}
-
-Widget::~Widget() = default;
-Widget::Widget(Widget &&) = default;
-Widget& Widget::operator=(Widget &&) = default;
 
 void Widget::Foo() {
     m_Impl->Foo();

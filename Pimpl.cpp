@@ -22,7 +22,7 @@ template <typename T>
 Pimpl<T>& Pimpl<T>::operator=(Pimpl&& ) = default;
 
 template <typename T>
-T* Pimpl<T>::operator->() {
+T* Pimpl<T>::operator->() const {
     return m_Ptr.get();
 }
 

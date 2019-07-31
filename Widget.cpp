@@ -12,9 +12,20 @@ public:
         , m_Height(height) {
     }
 
-    void Foo() {
-        std::cout << "Foo" << std::endl;
-        std::cout << m_Width << " " << m_Height << std::endl;
+    void SetWidth(int width) {
+        m_Width = width;
+    }
+
+    int GetWidth() const {
+        return m_Width;
+    }
+
+    void SetHeight(int height) {
+        m_Height = height;
+    }
+
+    int GetHeight() const {
+        return m_Height;
     }
 
 private:
@@ -22,8 +33,20 @@ private:
     int m_Height;
 };
 
-void Widget::Foo() {
-    m_Impl->Foo();
+void Widget::SetWidth(int width) {
+    m_Impl->SetWidth(width);
+}
+
+int Widget::GetWidth() const {
+    return m_Impl->GetWidth();
+}
+
+void Widget::SetHeight(int height) {
+    m_Impl->SetHeight(height);
+}
+
+int Widget::GetHeight() const {
+    return m_Impl->GetHeight();
 }
 
 Widget::Widget() = default;

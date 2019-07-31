@@ -19,7 +19,7 @@ public:
     Pimpl(Pimpl&& );
     Pimpl& operator=(Pimpl&& );
 
-    T* operator->();
+    T* operator->() const;
     T& operator*();
 private:
     std::unique_ptr<T> m_Ptr;

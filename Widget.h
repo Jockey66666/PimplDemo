@@ -7,7 +7,12 @@ class Widget {
 public:
     Widget();
     Widget(int width, int height);
-    void Foo();
+
+    void SetWidth(int width);
+    int GetWidth() const;
+
+    void SetHeight(int height);
+    int GetHeight() const;
 
 private:
     class Impl;

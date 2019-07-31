@@ -13,6 +13,8 @@ Widget::Widget()
 }
 
 Widget::~Widget() = default;
+Widget::Widget(Widget &&) = default;
+Widget& Widget::operator=(Widget &&) = default;
 
 void Widget::Foo() {
     m_Impl->Foo();

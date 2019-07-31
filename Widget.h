@@ -8,6 +8,12 @@ public:
     Widget();
     ~Widget();
 
+    Widget(const Widget& ) = delete;
+    Widget& operator=(const Widget& ) = delete;
+
+    Widget(Widget&& );
+    Widget& operator=(Widget&& );
+
 public:
     void Foo();
 

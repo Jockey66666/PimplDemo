@@ -12,6 +12,8 @@ Widget::Widget()
     : m_Impl(std::make_unique<Impl>()){
 }
 
+Widget::~Widget() = default;
+
 void Widget::Foo() {
     m_Impl->Foo();
 }

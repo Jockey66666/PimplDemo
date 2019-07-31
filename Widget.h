@@ -6,7 +6,8 @@
 class Widget {
 public:
     Widget();
-    
+    ~Widget();
+
 public:
     void Foo();
 
